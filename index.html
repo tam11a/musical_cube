@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cubic World | Welcome</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                background-color: #000;
+                cursor: grab;
+            }
+            
+            body #cube{
+                background-color: none;
+                height: 498px;
+                width: 498px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                border-radius: 15px;
+                z-index: 10;
+            }
+            #cube .tiles, .light{
+                /*box-shadow: 0 0 5px #fff;*/
+                background-color: #fff;
+                height: 160px;
+                width: 160px;
+                margin: 3px;
+                border-radius: 15px;
+                float: left;
+                transition: 0.3s;
+            }
+            #cube .light{
+                background: url('025-music-home.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            html:hover #cube .light {
+                background: url('025-music-f.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 150px #00ff00c2;
+                opacity: 100%;
+                transition: 0.3s;
+            }
+            html:hover .tiles{
+                opacity: 5%;
+                transition: 0.3s;
+            }  
+            html:hover #cube .light {
+                transform: scale(0.8) perspective(600px) rotateZ(90deg);
+                box-shadow: 0 0 150px #00ff00c2;
+                opacity: 100%;
+                transition: 0.3s;
+            }
+            #cube:hover .tiles{
+                background-color: transparent;
+                box-shadow: 0 0 15px #fff;
+                transition: 0.3s;
+            }
+            html #cube .light:hover{
+                background: url('025-music.png');
+                box-shadow: 0 0 100px #00ff00;
+                transform: scale(1) perspective(600px) rotateZ(0deg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                transition: 0.3s;
+                
+            }
+            #cube .light:hover .s5{
+                box-shadow: 0 0 100px #00ff00;
+                transition: 0.3s;
+            }
+            #cube .tiles:hover{
+                opacity: 100%;
+                transform: scale(0.8) perspective(600px) rotateZ(90deg);
+                transition: 0.3s;
+            }
+            #cube .tiles:active{
+                cursor: grabbing;
+            }
+            #cube .s1:hover{
+                background: url('017-like.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-color: none;
+                box-shadow: 0 0 100px #e100ff;
+                transition: 0.3s;
+            }
+            #cube .s2:hover{
+                background: url('008-download.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #6f00ff;
+                transition: 0.3s;
+            }
+            #cube .s3:hover{
+                background: url('015-info.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #0026ff;
+                transition: 0.3s;
+            }
+            #cube .s4:hover{
+                background: url('034-repeat.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #008cff;
+                transition: 0.3s;
+            }
+            #cube .s5:hover{
+                box-shadow: 0 0 100px #00ff00;
+                transition: 0.3s;
+            }
+            #cube .s6:hover{
+                background: url('041-shuffle.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #d9ff00;
+                transition: 0.3s;
+            }
+            #cube .s7:hover{
+                background: url('031-previous.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #ff7b00;
+                transition: 0.3s;
+            }
+            #cube .s8:hover{
+                background: url('029-play.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #ff0000;
+                transition: 0.3s;
+            }
+            #cube .s9:hover{
+                background: url('027-next.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                box-shadow: 0 0 100px #ff00d4;
+                transition: 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cube">
+            <a href="#"><section class="tiles s1"></section></a>
+            <a href="#"><section class="tiles s2"></section></a>
+            <a href="#"><section class="tiles s3"></section></a>
+            <a href="#"><section class="tiles s4"></section></a>
+            <a href="#"><section class="light tiles s5"></section></a>
+            <a href="#"><section class="tiles s6"></section></a>
+            <a href="#"><section class="tiles s7"></section></a>
+            <a href="#"><section class="tiles s8"></section></a>
+            <a href="#"><section class="tiles s9"></section></a>
+        </div>
+    </body>
+</html>
